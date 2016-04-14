@@ -11,16 +11,14 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'iteach' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'iteach' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'iteach' ), 'iteach', '<a href="http://www.bgwebagency.com/" rel="designer">Kiran Kumar Dash</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!-- BOOTSTRAP CORE JAVASCRIPT
+     Placed at the end of the document so the page
+     loads faster!
+========================================================= -->    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-2.2.3.min.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap.min.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/main.js"></script>
 
 <?php wp_footer(); ?>
 

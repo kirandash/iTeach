@@ -78,5 +78,3 @@
              </div><!-- navbar-wrapper -->
                  	
         </header>
-
-	<div id="content" class="site-content">
