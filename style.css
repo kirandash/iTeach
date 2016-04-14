@@ -392,7 +392,7 @@ body {
 	margin-top: 50px;
 	font-family: 'Raleway', Helvetica, sans-serfi;
 	font-size: 16px;
-	background: url('/wp-content/themes/iteach/assets/img/tile.jpg') top left repeat;	
+	background: url('/iteach/wp-content/themes/iteach/assets/img/tile.jpg') top left repeat;	
 }
 
 .logged-in .navbar-fixed-top {
@@ -474,7 +474,7 @@ img {
 }
 
 .modal-content {
-	background: url('/wp-content/themes/iteach/assets/img/tile.jpg') top left repeat;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/tile.jpg') top left repeat;
 }
 
 .badge.social {
@@ -524,7 +524,7 @@ blockquote:before {
 /* === HERO ===  */
 
 #hero {
-	background: url('/wp-content/themes/iteach/assets/img/hero-bg.jpg') 50% 0 repeat fixed;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/hero-bg.jpg') 50% 0 repeat fixed;
 	min-height: 500px;
 	padding: 40px 0;
 	color: white;
@@ -625,12 +625,12 @@ section h2 {
 }
 
 .feature-image-default {
-	background: url('/wp-content/themes/iteach/assets/img/stuff-feature.jpg') no-repeat;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/stuff-feature.jpg') no-repeat;
 	background-size: cover;
 }
 
 .feature-image-default-alt {
-	background: url('/wp-content/themes/iteach/assets/img/hipster-stuff.jpg') no-repeat;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/hipster-stuff.jpg') no-repeat;
 	background-size: cover;
 }
 
@@ -669,14 +669,14 @@ section h2 {
 }
 
 #featurette {
-	background: url('/wp-content/themes/iteach/assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
 	background-size: cover;
 	text-align: center;
 	color: white;
 }
 
 #instructor {
-	background: white url('/wp-content/themes/iteach/assets/img/kiran-dash.png') 90% -10px no-repeat;
+	background: white url('/iteach/wp-content/themes/iteach/assets/img/kiran-dash.png') 90% -10px no-repeat;
 }
 
 #instructor h2 {
@@ -727,7 +727,7 @@ section h2 {
 
 #signup {
 	text-align: center;
-	background: url('/wp-content/themes/iteach/assets/img/hipster-stuff.jpg') center center repeat fixed;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/hipster-stuff.jpg') center center repeat fixed;
 	background-size: cover;
 	color: white;
 	padding: 140px 0;
@@ -936,7 +936,7 @@ i.ci {
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background: url('/wp-content/themes/iteach/assets/img/icon-sprite.png') no-repeat;
+	background: url('/iteach/wp-content/themes/iteach/assets/img/icon-sprite.png') no-repeat;
 }
 
 .ci.ci-computer			{ background-position: 0 0; }
