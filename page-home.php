@@ -32,6 +32,17 @@ $features_section_body		 = get_field('features_section_body');
 $project_features_title		 = get_field('project_features_title');
 $project_features_body		 = get_field('project_features_body');
 
+$instructor_section_title	 = get_field('instructor_section_title');
+$instructor_name			 = get_field('instructor_name');
+$bio_excerpt				 = get_field('bio_excerpt');
+$full_bio					 = get_field('full_bio');
+$twitter_username			 = get_field('twitter_username');
+$facebook_username			 = get_field('facebook_username');
+$google_plus_username		 = get_field('google_plus_username');
+$num_students				 = get_field('num_students');
+$num_reviews				 = get_field('num_reviews');
+$num_courses				 = get_field('num_courses');
+
 get_header(); ?>
 
         <!-- HERO
@@ -230,7 +241,7 @@ get_header(); ?>
                 </div><!-- row -->
             </div><!-- container -->
         </section><!-- featurette -->
-        
+       
         <!-- INSTRUCTOR
         ========================================================= -->
         <section id="instructor">
@@ -239,28 +250,30 @@ get_header(); ?>
                     <div class="col-sm-8 col-md-6">
                         <div class="row">
                             <div class="col-lg-8">
-                                <h2>Your Instructor <small>Kiran Dash</small></h2>
+                                <h2><?php echo $instructor_section_title; ?> <small><?php echo $instructor_name; ?></small></h2>
                             </div><!-- end col -->
                             
                             <div class="col-lg-4">
                                 
-                                <a href="https://twitter.com/TheKiranDash" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
+                                <?php if( !empty($twitter_username) ): ?>
+                                <a href="https://twitter.com/<?php echo $twitter_username; ?>" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
+                                <?php endif; ?>
                                 
-                                <a href="https://facebook.com/thekirankumardash" target="_blank" class="badge social facebook"><i class="fa fa-facebook"></i></a>
+                                <?php if( !empty($facebook_username) ): ?>
+                                <a href="https://facebook.com/<?php echo $facebook_username; ?>" target="_blank" class="badge social facebook"><i class="fa fa-facebook"></i></a>
+                                <?php endif; ?>
                                 
-                                <a href="https://plus.google.com/+KiranDash" target="_blank" class="badge social gplus"><i class="fa fa-google-plus"></i></a>
+                                <?php if( !empty($google_plus_username) ): ?>
+                                <a href="https://plus.google.com/<?php echo $google_plus_username; ?>" target="_blank" class="badge social gplus"><i class="fa fa-google-plus"></i></a>
+                                <?php endif; ?>
                                                         
                             </div><!-- end col -->
                             
                         </div><!-- row -->
                         
-                        <p class="lead">A highly skilled professional, Kiran Dash is a passionate and experienced web designer, developer, blogger and digital entrepreneur.</p>
+                        <p class="lead"><?php echo $bio_excerpt; ?></p>
                         
-                        Hailing from The State of Gods (Orissa, India), Kiran made the trek to the South India (Hyderabad, India) to educate and equip himself with the necessary skills to become a spearhead in his trade of solving problems on the web, crafting design solutions, and speaking in code.<br />
-        <br />
-        Kiran&#039;s determination and love for what he does has landed him in some pretty interesting places with some neat people. He&#039;s had the privilege of working with, and providing solutions for, numerous businesses, big &amp; small, across the Americas.<br />
-        <br />
-        Kiran builds custom websites, and provides design solutions for a wide-array of clientele at his company, Brightside Studios. He regularly blogs about passive income, living your life to the fullest, and provides premium quality web design tutorials and courses for tens of thousands of amazing people desiring to master their craft.				
+                        <?php echo $full_bio; ?>			
                         <hr>
                         
                         <h3>The Numbers <small>They Don't Lie</small></h3>
@@ -269,7 +282,7 @@ get_header(); ?>
                             <div class="col-xs-4">
                                 <div class="num">
                                     <div class="num-content">
-                                        100+ <span>students</span>
+                                        <?php echo $num_students; ?> <span>students</span>
                                     </div><!-- num-content -->
                                 </div><!-- num -->
                             </div><!-- end col -->
@@ -277,7 +290,7 @@ get_header(); ?>
                             <div class="col-xs-4">
                                 <div class="num">
                                     <div class="num-content">
-                                        5000+ <span>views</span>
+                                        <?php echo $num_reviews; ?> <span>views</span>
                                     </div><!-- num-content -->
                                 </div><!-- num -->
                             </div><!-- end col -->
@@ -285,7 +298,7 @@ get_header(); ?>
                             <div class="col-xs-4">
                                 <div class="num">
                                     <div class="num-content">
-                                        5 <span>courses</span>
+                                        <?php echo $num_courses; ?> <span>courses</span>
                                     </div><!-- num-content -->
                                 </div><!-- num -->
                             </div><!-- end col -->
