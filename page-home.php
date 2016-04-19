@@ -318,60 +318,29 @@ get_header(); ?>
                         
                         <h2>What People Are Saying About Kiran</h2>
                                         
+                        
+                        <?php $loop = new WP_Query( array( 'post_type' => 'testimonial', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+                    
+                    	<?php while( $loop->have_posts() ): $loop->the_post(); ?>
+                        
                         <!-- TESTIMONIAL -->
                         <div class="row testimonial">
                             <div class="col-sm-4">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/client1.jpg" alt="Client 1" />						
+                                <?php 
+									if( has_post_thumbnail() ){
+										the_post_thumbnail( array( 200,200 ) ); 
+									}
+								?>	
                             </div><!-- end col -->
                             <div class="col-sm-8">
                                 <blockquote>
-                                    <p>These videos are well created, concise, fast-paced, easy to follow, and just funny enough to keep you chuckling as you&#8217;re slamming out lines of code. I&#8217;ve taken 3 courses from this instructor. Whenever I have questions he is right there with a simple solution or a helpful suggestion to keep me going forward with the course work.</p>
-                                    <cite>&mdash; Rashee, graduate of all of Kiran&#8217;s courses</cite>
+                                    <?php the_content(); ?>
+                                    <cite>&mdash; <?php the_title(); ?></cite>
                                 </blockquote>
                             </div><!-- end col -->
                         </div><!-- row -->
                         
-                                        
-                        <!-- TESTIMONIAL -->
-                        <div class="row testimonial">
-                            <div class="col-sm-4">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/client2.jpg" alt="Client 2" />						
-                            </div><!-- end col -->
-                            <div class="col-sm-8">
-                                <blockquote>
-                                    <p>I found Kiran to be a great teacher, and a very inspiring person. It&#8217;s clear he is very passionate about helping designers learn to code, and I look forward to more courses from him!</p>
-                                    <cite>&mdash; Alisha, graduate of Build a Website from Scratch with HTML &#038; CSS</cite>
-                                </blockquote>
-                            </div><!-- end col -->
-                        </div><!-- row -->
-                        
-                                        
-                        <!-- TESTIMONIAL -->
-                        <div class="row testimonial">
-                            <div class="col-sm-4">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/client3.jpg" alt="Client 3" />						
-                            </div><!-- end col -->
-                            <div class="col-sm-8">
-                                <blockquote>
-                                    <p>Kiran is amazing and I honestly think he&#8217;s the best tutor of all the courses I have taken on Udemy. Will definitely be following him in the future. Thanks Kiran!</p>
-                                    <cite>&mdash; Ben, graduate of Code a Responsive Website with Bootstrap 3</cite>
-                                </blockquote>
-                            </div><!-- end col -->
-                        </div><!-- row -->
-                        
-                                        
-                        <!-- TESTIMONIAL -->
-                        <div class="row testimonial">
-                            <div class="col-sm-4">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/client4.jpg" alt="Client 4" />		
-                            </div><!-- end col -->
-                            <div class="col-sm-8">
-                                <blockquote>
-                                    <p>Kiran is an excellent instructor. His content is super high quality, and you can see the love and care put into every section. The tutorials are the perfect length, and you feel like your doing something right out the gate! I really can&#8217;t believe this is free. I highly recommend taking advantage of this course.</p>
-                                    <cite>&mdash; Lisa, graduate of Code Dynamic Websites with PHP</cite>
-                                </blockquote>
-                            </div><!-- end col -->
-                        </div><!-- row -->
+                        <?php endwhile; ?>
                         
                     </div><!-- end col -->
                 </div><!-- row -->
