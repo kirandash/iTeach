@@ -36,12 +36,8 @@
     </div><!-- post-image -->
 	<?php } ?>
         
-    <div class="post-excerpt">
-        <?php the_excerpt(); ?>
+    <div class="post-body">
+        <?php the_content(); ?>
     </div><!-- post-excerpt -->
-
-
-	<footer class="entry-footer">
-		<?php iteach_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    
 </article><!-- #post-## -->
