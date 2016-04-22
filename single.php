@@ -30,15 +30,16 @@ get_header(); ?>
 		?>
 
 			</main><!-- main -->
+               
+              <!-- SIDEBAR
+              ================================================== -->
+              <aside class="col-sm-4">
+            
+                <?php get_sidebar(); ?>
+                        
+              </aside>
+                          
 		</div><!-- #primary -->
   </div><!-- .container -->
-  
-  <!-- SIDEBAR
-  ================================================== -->
-  <aside class="col-sm-4">
-
-    get_sidebar();
-            
-  </aside>
 
 <?php get_footer();
