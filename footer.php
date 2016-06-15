@@ -30,7 +30,7 @@
         <footer>
             <div class="container">
                 <div class="col-sm-3">
-                    <p><a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="iTeach WordPress"></a></p>
+                    <p><a href="/"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/logo.png" alt="iTeach WordPress"></a></p>
                 </div><!-- end col -->
                 <div class="col-sm-6">
                     
@@ -39,7 +39,8 @@
 							
 							'theme_location' => 'footer',
 							'container' => 'nav',
-							'menu_class' => 'list-unstyled list-inline'
+							'menu_class' => 'list-unstyled list-inline',
+							'fallback_cb'       => 'false'
 						));
 					?>
                     
@@ -88,9 +89,9 @@
      loads faster!
 ========================================================= -->    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-2.2.3.min.js"></script>
-<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/main.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/jquery-2.2.3.min.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/bootstrap.min.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/main.js"></script>
 
 <?php wp_footer(); ?>
 

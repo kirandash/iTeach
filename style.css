@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: iteach
-Tags:
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -756,7 +756,7 @@ section h2 {
 footer {
 	background: #3e4249;
 	color: white;
-	padding: 20px 0 10px;
+	padding: 20px 10px;
 	font-size: 12px;
 }
 

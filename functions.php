@@ -171,3 +171,7 @@ function new_excerpt_more($more) {
 	return '... <a class="moretag" href="'. get_permalink($post->ID) .'">Continue Reading</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
+// Register Custom Navigation Walker
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';

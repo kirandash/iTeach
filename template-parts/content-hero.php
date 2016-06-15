@@ -15,7 +15,7 @@ $button_text				 = get_post_meta( 7, 'button_text', true );
         <div class="container clearfix">
             <div class="row">
                 <div class="col-sm-5">
-                    <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-badge.png" alt="iTeach WordPress">
+                    <img class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/logo-badge.png" alt="iTeach WordPress">
                 </div><!-- col -->
                 
                 <div class="col-sm-7 hero-text">

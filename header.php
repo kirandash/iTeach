@@ -18,10 +18,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Bootstrap core CSS -->
-<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- FontAwesome Icons -->
-<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         
 <!-- Google Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
@@ -59,16 +59,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="/"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/logo.png" alt="iTeach WordPress"></a>
+                      <a class="navbar-brand" href="/"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/logo.png" alt="iTeach WordPress"></a>
                     </div><!-- navbar-header -->
                 
                     <?php
 						wp_nav_menu( array(
-							
 							'theme_location' => 'primary',
 							'container' => 'nav',
 							'container_class' => 'collapse navbar-collapse',
-							'menu_class' => 'nav navbar-nav navbar-right'
+							'menu_class' => 'nav navbar-nav navbar-right',
+							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                            'walker'            => new wp_bootstrap_navwalker()
 						));
 					?>
                     
